@@ -615,7 +615,7 @@ export default function MantoArtSite() {
           </a>
           <div style={{ display: "flex", justifyContent: "center", gap: 32, marginTop: 40, flexWrap: "wrap" }}>
             {[
-              { label: t.contact.labelInstagram, value: "@mantoart" },
+              { label: t.contact.labelInstagram, value: "@mantodoencanto" },
               { label: t.contact.labelLocal,     value: "Itacaré, BA" },
               { label: t.contact.labelHours,     value: t.contact.hoursValue },
             ].map((item, i) => (
