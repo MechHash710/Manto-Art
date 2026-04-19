@@ -545,17 +545,12 @@ export default function MantoArtSite() {
             <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(32px, 5vw, 48px)", fontWeight: 500, color: C.dark, margin: 0 }}>{t.about.title}</h2>
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 32, alignItems: "center" }}>
-            <div style={{
-              aspectRatio: "4/5", borderRadius: 20,
-              background: `linear-gradient(145deg, ${C.secondary}60, ${C.warm}40)`,
-              display: "flex", alignItems: "center", justifyContent: "center",
-              border: `2px dashed ${C.primary}25`, position: "relative", overflow: "hidden",
-            }}>
-              <CrochetPattern opacity={0.06} />
-              <div style={{ textAlign: "center", zIndex: 1 }}>
-                <LogoIcon size={60} />
-                <div style={{ fontFamily: "'Caveat', cursive", fontSize: 16, color: C.primary, marginTop: 12, opacity: 0.6 }}>{t.about.photoPlaceholder}</div>
-              </div>
+            <div style={{ aspectRatio: "4/5", borderRadius: 20, overflow: "hidden" }}>
+              <img
+                src="/fotos/WhatsApp Image 2026-04-19 at 19.41.22.jpeg"
+                alt="Criadora da Manto Art"
+                style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+              />
             </div>
             <div>
               <p style={{ fontSize: 15, color: "#5C4E3F", lineHeight: 2, margin: "0 0 20px", fontWeight: 300 }}>{t.about.p1}</p>
