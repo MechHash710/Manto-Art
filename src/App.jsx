@@ -27,9 +27,9 @@ const products = [
     tag: "Foto real",
     priceLabel: "Sob encomenda",
     cat: "tops",
-    image: "/Fotos/WhatsApp Image 2026-04-19 at 15.17.02.jpeg",
+    image: "/fotos/WhatsApp Image 2026-04-19 at 15.17.02.jpeg",
     alt: "Top de croche azul e cru com detalhes de conchas aplicadas.",
-    desc: "Top halter em croche com listras marcadas e acabamento com conchas. Ideal para praia, ensaios e looks de verao.",
+    desc: "Top halter em croche artesanal, feito com fio azul e cru em listras horizontais bem definidas. Acabamento com conchas naturais aplicadas na barra — uma peca com muito carater, perfeita para praia, ensaios fotograficos e looks de verao com personalidade.",
   },
   {
     id: 2,
@@ -37,9 +37,9 @@ const products = [
     tag: "Foto real",
     priceLabel: "Sob consulta",
     cat: "tops",
-    image: "/Fotos/WhatsApp Image 2026-04-19 at 15.17.26.jpeg",
-    alt: "Top vermelho de croche com barra em squares verdes e amarelos.",
-    desc: "Modelo com busto estruturado e faixa em granny square. Uma peca vibrante, com presenca artesanal bem evidente.",
+    image: "/fotos/WhatsApp Image 2026-04-19 at 15.17.26.jpeg",
+    alt: "Top vermelho de croche com barra em granny squares verdes e amarelos.",
+    desc: "Modelo vibrante com busto estruturado em vermelho e faixa inferior em granny squares coloridos — verde, amarelo e vermelho. Feito totalmente a mao, cada quadrado e individual e reforca a identidade artesanal da peca. Ideal para quem quer se destacar.",
   },
   {
     id: 3,
@@ -47,9 +47,9 @@ const products = [
     tag: "Foto real",
     priceLabel: "Sob encomenda",
     cat: "tops",
-    image: "/Fotos/WhatsApp Image 2026-04-19 at 15.17.48.jpeg",
+    image: "/fotos/WhatsApp Image 2026-04-19 at 15.17.48.jpeg",
     alt: "Top verde de croche com quadrados florais na barra.",
-    desc: "Top com caimento ajustado, textura firme e detalhe floral na base. Funciona muito bem como peca protagonista do look.",
+    desc: "Top com caimento ajustado, tecido em verde esmeralda com textura firme e uniforme. A barra traz detalhes em squares florais que dao movimento e sofisticacao a peca. Combina com saias longas, shorts e calca de linho — e sempre a protagonista do look.",
   },
   {
     id: 4,
@@ -57,9 +57,9 @@ const products = [
     tag: "Conjunto em destaque",
     priceLabel: "Consulte valor",
     cat: "conjuntos",
-    image: "/Fotos/WhatsApp Image 2026-04-19 at 15.18.08.jpeg",
+    image: "/fotos/WhatsApp Image 2026-04-19 at 15.18.08.jpeg",
     alt: "Top marrom em croche com bolsa preta transversal artesanal.",
-    desc: "Composicao pronta para anuncio: top em tom terroso com bolsa transversal artesanal. Excelente para vender a proposta completa.",
+    desc: "Composicao completa: top em tom terroso com trama densa e bolsa transversal preta feita a mao. O conjunto entrega um visual pronto, coeso e muito comercial. Otimo para quem busca praticidade com estilo autoral — tudo da mesma marca e feito sob medida.",
   },
   {
     id: 5,
@@ -67,9 +67,9 @@ const products = [
     tag: "Foto real",
     priceLabel: "Sob encomenda",
     cat: "tops",
-    image: "/Fotos/WhatsApp Image 2026-04-19 at 15.18.25.jpeg",
+    image: "/fotos/WhatsApp Image 2026-04-19 at 15.18.25.jpeg",
     alt: "Top cru em croche com detalhes de conchas na barra.",
-    desc: "Modelo em tom cru com visual leve e sofisticado. Destaque para a trama central e os acabamentos com conchas.",
+    desc: "Modelo em tom areia com visual leve, natural e muito elegante. A trama central estruturada valoriza a silhueta, enquanto as conchas naturais na barra entregam aquele detalhe que faz a diferenca. Uma peca versatil, que vai da praia ao jantar ao ar livre.",
   },
   {
     id: 6,
@@ -77,19 +77,19 @@ const products = [
     tag: "Look completo",
     priceLabel: "Consulte valor",
     cat: "conjuntos",
-    image: "/Fotos/WhatsApp Image 2026-04-19 at 15.18.53.jpeg",
+    image: "/fotos/WhatsApp Image 2026-04-19 at 15.18.53.jpeg",
     alt: "Top vermelho em croche com bolsa preta artesanal.",
-    desc: "Visual forte e comercial, com top frente unica e bolsa preta aplicada. Uma combinacao pronta para campanha e encomenda.",
+    desc: "Look de impacto com top frente unica em vermelho intenso e bolsa preta artesanal aplicada. A combinacao cria um visual forte, moderno e com presenca — perfeito para campanha, conteudo de redes sociais ou para quem quer se vestir com intencao e autoria.",
   },
   {
     id: 7,
-    name: "Top Gota Color",
+    name: "Top Gota — Varias Cores",
     tag: "Feito por encomenda",
     priceLabel: "Cores sob pedido",
     cat: "variacoes",
-    image: "/Fotos/WhatsApp Image 2026-04-19 at 15.19.09.jpeg",
+    image: "/fotos/WhatsApp Image 2026-04-19 at 15.19.09.jpeg",
     alt: "Varios tops de croche no mesmo modelo, em cores diferentes.",
-    desc: "Mesmo modelo em varias cores para mostrar possibilidade de personalizacao. Perfeito para destacar a proposta sob medida da marca.",
+    desc: "O mesmo modelo Gota disponivel em multiplas cores — a sua escolha. Esta foto mostra a amplitude de personalizacao que a Manto Art oferece: mesmo ponto, mesmo acabamento, identidade completamente sua. Escolha a cor que combina com voce e encomende o seu.",
   },
 ];
 
@@ -499,7 +499,7 @@ export default function MantoArtSite() {
             }}
           >
             <img
-              src="/Fotos/WhatsApp Image 2026-04-19 at 15.18.25.jpeg"
+              src="/fotos/WhatsApp Image 2026-04-19 at 15.18.25.jpeg"
               alt="Top cru em croche da Manto Art."
               style={{
                 width: "100%",
@@ -512,7 +512,7 @@ export default function MantoArtSite() {
             />
             <div style={{ display: "grid", gap: 16 }}>
               <img
-                src="/Fotos/WhatsApp Image 2026-04-19 at 15.17.02.jpeg"
+                src="/fotos/WhatsApp Image 2026-04-19 at 15.17.02.jpeg"
                 alt="Top azul em croche com detalhes de conchas."
                 style={{
                   width: "100%",
@@ -523,7 +523,7 @@ export default function MantoArtSite() {
                 }}
               />
               <img
-                src="/Fotos/WhatsApp Image 2026-04-19 at 15.18.53.jpeg"
+                src="/fotos/WhatsApp Image 2026-04-19 at 15.18.53.jpeg"
                 alt="Top vermelho com bolsa preta artesanal."
                 style={{
                   width: "100%",
@@ -677,22 +677,22 @@ export default function MantoArtSite() {
             }}
           >
             <img
-              src="/Fotos/WhatsApp Image 2026-04-19 at 15.17.48.jpeg"
+              src="/fotos/WhatsApp Image 2026-04-19 at 15.17.48.jpeg"
               alt="Top verde artesanal da Manto Art."
               style={{ width: "100%", height: 220, objectFit: "cover", borderRadius: 22 }}
             />
             <img
-              src="/Fotos/WhatsApp Image 2026-04-19 at 15.18.08.jpeg"
+              src="/fotos/WhatsApp Image 2026-04-19 at 15.18.08.jpeg"
               alt="Top marrom com bolsa preta artesanal."
               style={{ width: "100%", height: 220, objectFit: "cover", borderRadius: 22 }}
             />
             <img
-              src="/Fotos/WhatsApp Image 2026-04-19 at 15.17.26.jpeg"
+              src="/fotos/WhatsApp Image 2026-04-19 at 15.17.26.jpeg"
               alt="Top vermelho em croche com granny square."
               style={{ width: "100%", height: 220, objectFit: "cover", borderRadius: 22 }}
             />
             <img
-              src="/Fotos/WhatsApp Image 2026-04-19 at 15.19.09.jpeg"
+              src="/fotos/WhatsApp Image 2026-04-19 at 15.19.09.jpeg"
               alt="Variacoes de tops coloridos feitos em croche."
               style={{ width: "100%", height: 220, objectFit: "cover", borderRadius: 22 }}
             />
