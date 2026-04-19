@@ -22,14 +22,14 @@ const translations = {
       home: "Inicio", pieces: "Pecas", about: "Sobre", contact: "Contato", cta: "Fale conosco",
     },
     hero: {
-      tag: "croche artesanal em Florianopolis",
+      tag: "croche artesanal em Itacaré",
       title1: "Feito a mao,",
       title2: "feito com alma.",
       desc: "Cada peca da Manto Art e tecida a mao com carinho e dedicacao. Sao horas de trabalho artesanal transformadas em roupas unicas que contam historias.",
       btnPieces: "Ver Pecas",
       btnWa: "Falar no WhatsApp",
     },
-    values: ["100% Artesanal", "Fios Selecionados", "Peca Unica", "Florianopolis, SC"],
+    values: ["100% Artesanal", "Fios Selecionados", "Peca Unica", "Itacaré, BA"],
     products: {
       tag: "colecao",
       title: "Nossas Pecas",
@@ -42,7 +42,7 @@ const translations = {
       tag: "nossa historia",
       title: "Sobre a Manto Art",
       p1: "A Manto Art nasceu do amor pelo croche e pela vontade de criar pecas que carregam alma. Cada ponto e dado com intencao, cada fio e escolhido com carinho.",
-      p2: "Em Florianopolis, entre o mar e a natureza, encontramos a inspiracao perfeita para criar roupas que sao mais que pecas — sao historias tecidas a mao.",
+      p2: "Em Itacaré, entre o mar e a natureza, encontramos a inspiracao perfeita para criar roupas que sao mais que pecas — sao historias tecidas a mao.",
       badges: ["Autenticidade", "Acolhimento", "Sustentabilidade", "Slow Fashion"],
       photoPlaceholder: "sua foto aqui",
     },
@@ -50,7 +50,7 @@ const translations = {
       tag: "quem ja vestiu",
       title: "O que dizem",
       items: [
-        { text: "A peca mais linda que ja tive! Cada detalhe e perfeito, da pra sentir o carinho em cada ponto.", name: "Marina S.", loc: "Florianopolis" },
+        { text: "A peca mais linda que ja tive! Cada detalhe e perfeito, da pra sentir o carinho em cada ponto.", name: "Marina S.", loc: "Itacaré" },
         { text: "Comprei o Top Areia e nao tiro mais. Todo mundo pergunta onde comprei. Super exclusivo!", name: "Juliana R.", loc: "Sao Paulo" },
         { text: "Presente pra minha mae, ela amou! A embalagem chegou linda, parecia um presente de boutique.", name: "Camila F.", loc: "Curitiba" },
       ],
@@ -83,14 +83,14 @@ const translations = {
       home: "Home", pieces: "Pieces", about: "About", contact: "Contact", cta: "Get in touch",
     },
     hero: {
-      tag: "handmade crochet in Florianopolis",
+      tag: "handmade crochet in Itacaré",
       title1: "Made by hand,",
       title2: "made with soul.",
       desc: "Each Manto Art piece is hand-woven with care and dedication. Hours of artisan work transformed into unique garments that tell a story.",
       btnPieces: "See Pieces",
       btnWa: "Message on WhatsApp",
     },
-    values: ["100% Handmade", "Selected Yarns", "One of a Kind", "Florianopolis, SC"],
+    values: ["100% Handmade", "Selected Yarns", "One of a Kind", "Itacaré, BA"],
     products: {
       tag: "collection",
       title: "Our Pieces",
@@ -103,7 +103,7 @@ const translations = {
       tag: "our story",
       title: "About Manto Art",
       p1: "Manto Art was born from a love of crochet and the desire to create pieces that carry soul. Every stitch is placed with intention, every yarn chosen with care.",
-      p2: "In Florianopolis, surrounded by the sea and nature, we find the perfect inspiration to create garments that are more than pieces — they are stories woven by hand.",
+      p2: "In Itacaré, surrounded by the sea and nature, we find the perfect inspiration to create garments that are more than pieces — they are stories woven by hand.",
       badges: ["Authenticity", "Warmth", "Sustainability", "Slow Fashion"],
       photoPlaceholder: "your photo here",
     },
@@ -111,7 +111,7 @@ const translations = {
       tag: "who has worn it",
       title: "What they say",
       items: [
-        { text: "The most beautiful piece I've ever owned! Every detail is perfect, you can feel the love in every stitch.", name: "Marina S.", loc: "Florianopolis" },
+        { text: "The most beautiful piece I've ever owned! Every detail is perfect, you can feel the love in every stitch.", name: "Marina S.", loc: "Itacaré" },
         { text: "I bought the Sand Top and never take it off. Everyone asks where I got it. So exclusive!", name: "Juliana R.", loc: "Sao Paulo" },
         { text: "A gift for my mom and she loved it! The packaging was gorgeous — it felt like a boutique present.", name: "Camila F.", loc: "Curitiba" },
       ],
@@ -144,14 +144,14 @@ const translations = {
       home: "Inicio", pieces: "Piezas", about: "Sobre", contact: "Contacto", cta: "Contactar",
     },
     hero: {
-      tag: "crochet artesanal en Florianopolis",
+      tag: "crochet artesanal en Itacaré",
       title1: "Hecho a mano,",
       title2: "hecho con alma.",
       desc: "Cada pieza de Manto Art es tejida a mano con carino y dedicacion. Son horas de trabajo artesanal transformadas en prendas unicas que cuentan historias.",
       btnPieces: "Ver Piezas",
       btnWa: "Escribir en WhatsApp",
     },
-    values: ["100% Artesanal", "Hilos Seleccionados", "Pieza Unica", "Florianopolis, SC"],
+    values: ["100% Artesanal", "Hilos Seleccionados", "Pieza Unica", "Itacaré, BA"],
     products: {
       tag: "coleccion",
       title: "Nuestras Piezas",
@@ -164,7 +164,7 @@ const translations = {
       tag: "nuestra historia",
       title: "Sobre Manto Art",
       p1: "Manto Art nacio del amor por el crochet y el deseo de crear piezas que lleven alma. Cada punto se da con intencion, cada hilo se elige con carino.",
-      p2: "En Florianopolis, entre el mar y la naturaleza, encontramos la inspiracion perfecta para crear ropa que es mas que prendas — son historias tejidas a mano.",
+      p2: "En Itacaré, entre el mar y la naturaleza, encontramos la inspiracion perfecta para crear ropa que es mas que prendas — son historias tejidas a mano.",
       badges: ["Autenticidad", "Calidez", "Sostenibilidad", "Slow Fashion"],
       photoPlaceholder: "tu foto aqui",
     },
@@ -172,7 +172,7 @@ const translations = {
       tag: "quienes ya lo usaron",
       title: "Lo que dicen",
       items: [
-        { text: "La pieza mas linda que he tenido. Cada detalle es perfecto, se siente el carino en cada punto.", name: "Marina S.", loc: "Florianopolis" },
+        { text: "La pieza mas linda que he tenido. Cada detalle es perfecto, se siente el carino en cada punto.", name: "Marina S.", loc: "Itacaré" },
         { text: "Compre el Top Arena y no me lo saco mas. Todos preguntan donde lo compre. Super exclusivo!", name: "Juliana R.", loc: "Sao Paulo" },
         { text: "Un regalo para mi mama y lo amo! El empaque llego hermoso, parecia un regalo de boutique.", name: "Camila F.", loc: "Curitiba" },
       ],
@@ -616,7 +616,7 @@ export default function MantoArtSite() {
           <div style={{ display: "flex", justifyContent: "center", gap: 32, marginTop: 40, flexWrap: "wrap" }}>
             {[
               { label: t.contact.labelInstagram, value: "@mantoart" },
-              { label: t.contact.labelLocal,     value: "Florianopolis, SC" },
+              { label: t.contact.labelLocal,     value: "Itacaré, BA" },
               { label: t.contact.labelHours,     value: t.contact.hoursValue },
             ].map((item, i) => (
               <div key={i}>
@@ -645,7 +645,7 @@ export default function MantoArtSite() {
         </div>
         <div style={{ height: 1, background: `${C.secondary}15`, maxWidth: 300, margin: "0 auto 20px" }} />
         <p style={{ fontSize: 10, color: C.secondary, opacity: 0.4, margin: 0 }}>
-          Manto Art · Florianopolis, SC · {new Date().getFullYear()}
+          Manto Art · Itacaré, BA · {new Date().getFullYear()}
         </p>
       </footer>
     </div>
