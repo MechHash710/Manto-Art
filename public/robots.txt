@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://SEU-DOMINIO-AQUI.vercel.app/sitemap.xml
+Sitemap: https://manto-qnkw1ij13-randhys-projects-611333e3.vercel.app/sitemap.xml
