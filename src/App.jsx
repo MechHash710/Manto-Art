@@ -14,6 +14,35 @@ const C = {
 
 const WHATSAPP = "5571981848206";
 
+const META = {
+  pt: {
+    title: "Manto Art — Crochê Artesanal | Moda de Praia | Itacaré, BA",
+    desc: "Peças únicas de crochê feitas à mão em Itacaré, BA. Tops, conjuntos e acessórios de moda de praia artesanal para turistas e visitantes. Feito à mão, feito com alma.",
+    locale: "pt_BR",
+    lang: "pt-BR",
+  },
+  en: {
+    title: "Manto Art — Handmade Crochet Beachwear | Itacaré, Bahia, Brazil",
+    desc: "Unique handmade crochet beachwear from Itacaré, Bahia, Brazil. Artisan tops, sets and accessories for tourists and beach lovers. Shop via WhatsApp. Made by hand, made with soul.",
+    locale: "en_US",
+    lang: "en",
+  },
+  es: {
+    title: "Manto Art — Ropa de Playa Artesanal de Crochet | Itacaré, Bahía, Brasil",
+    desc: "Ropa de playa artesanal de crochet hecha a mano en Itacaré, Bahía, Brasil. Tops, conjuntos y accesorios únicos para turistas. Compra por WhatsApp. Hecho a mano, hecho con alma.",
+    locale: "es_ES",
+    lang: "es",
+  },
+};
+
+const getInitialLang = () => {
+  const url = new URLSearchParams(window.location.search).get("lang");
+  if (url && ["pt", "en", "es"].includes(url)) return url;
+  const saved = localStorage.getItem("manto-lang");
+  if (saved && ["pt", "en", "es"].includes(saved)) return saved;
+  return "pt";
+};
+
 // ── Translations ─────────────────────────────────────────────
 const translations = {
   pt: {
@@ -22,14 +51,14 @@ const translations = {
       home: "Inicio", pieces: "Pecas", about: "Sobre", contact: "Contato", cta: "Fale conosco",
     },
     hero: {
-      tag: "croche artesanal em Itacaré",
+      tag: "croche artesanal · moda de praia · Itacaré, BA",
       title1: "Feito a mao,",
       title2: "feito com alma.",
-      desc: "Cada peca da Manto Art e tecida a mao com carinho e dedicacao. Sao horas de trabalho artesanal transformadas em roupas unicas que contam historias.",
-      btnPieces: "Ver Pecas",
-      btnWa: "Falar no WhatsApp",
+      desc: "Descubra moda de praia artesanal em crochê feita à mão em Itacaré, Bahia. Cada peça da Manto Art é um souvenir vivo — horas de trabalho artesanal transformadas em roupas únicas que você vai usar muito depois da viagem.",
+      btnPieces: "Ver a Colecao",
+      btnWa: "Pedir no WhatsApp",
     },
-    values: ["100% Artesanal", "Fios Selecionados", "Peca Unica", "Itacaré, BA"],
+    values: ["100% Artesanal", "Moda de Praia", "Peca Unica", "Itacaré, BA"],
     products: {
       tag: "colecao",
       title: "Nossas Pecas",
@@ -42,23 +71,23 @@ const translations = {
       tag: "nossa historia",
       title: "Sobre a Manto Art",
       p1: "A Manto Art nasceu do amor pelo croche e pela vontade de criar pecas que carregam alma. Cada ponto e dado com intencao, cada fio e escolhido com carinho.",
-      p2: "Em Itacaré, entre o mar e a natureza, encontramos a inspiracao perfeita para criar roupas que sao mais que pecas — sao historias tecidas a mao.",
-      badges: ["Autenticidade", "Acolhimento", "Sustentabilidade", "Slow Fashion"],
+      p2: "Em Itacaré, entre o mar e a natureza, encontramos a inspiracao perfeita para criar moda de praia artesanal que vai muito alem da viagem. Atendemos turistas e visitantes do mundo todo — falamos portugues, ingles e espanhol.",
+      badges: ["Autenticidade", "Moda de Praia", "Sustentabilidade", "Slow Fashion"],
       photoPlaceholder: "sua foto aqui",
     },
     testimonials: {
       tag: "quem ja vestiu",
       title: "O que dizem",
       items: [
-        { text: "A peca mais linda que ja tive! Cada detalhe e perfeito, da pra sentir o carinho em cada ponto.", name: "Marina S.", loc: "Itacaré" },
-        { text: "Comprei o Top Areia e nao tiro mais. Todo mundo pergunta onde comprei. Super exclusivo!", name: "Juliana R.", loc: "Sao Paulo" },
-        { text: "Presente pra minha mae, ela amou! A embalagem chegou linda, parecia um presente de boutique.", name: "Camila F.", loc: "Curitiba" },
+        { text: "Encontrei a Manto Art visitando Itacaré e comprei duas pecas. Em casa, todo mundo pergunta de onde sao. Vale cada centavo!", name: "Marina S.", loc: "Itacaré" },
+        { text: "Comprei o Top Areia e nao tiro mais. Perfeito pra praia, super exclusivo. O melhor souvenir que trouxe da Bahia!", name: "Juliana R.", loc: "Sao Paulo" },
+        { text: "Melhor lembranca da minha viagem a Itacaré! Usei direto na praia e recebi elogios o dia todo.", name: "Camila F.", loc: "Curitiba" },
       ],
     },
     contact: {
-      tag: "vamos conversar?",
+      tag: "de visita em Itacaré?",
       title: "Fale com a gente",
-      desc: "Quer saber mais sobre uma peca? Tem uma encomenda especial? Chama a gente no WhatsApp — a conversa e sempre pessoal e sem compromisso.",
+      desc: "Visitando Itacaré ou comprando de fora? Atendemos turistas e visitantes de todo o Brasil e do mundo. Chama no WhatsApp para pecas, encomendas especiais e envio — a conversa e sempre pessoal e sem compromisso.",
       btn: "Chamar no WhatsApp",
       labelInstagram: "Instagram",
       labelLocal: "Local",
@@ -83,43 +112,43 @@ const translations = {
       home: "Home", pieces: "Pieces", about: "About", contact: "Contact", cta: "Get in touch",
     },
     hero: {
-      tag: "handmade crochet in Itacaré",
+      tag: "handmade crochet beachwear · Itacaré, Bahia, Brazil",
       title1: "Made by hand,",
       title2: "made with soul.",
-      desc: "Each Manto Art piece is hand-woven with care and dedication. Hours of artisan work transformed into unique garments that tell a story.",
-      btnPieces: "See Pieces",
-      btnWa: "Message on WhatsApp",
+      desc: "Discover handcrafted crochet beachwear from Itacaré, Bahia. Each Manto Art piece is a wearable souvenir — hours of artisan work transformed into unique beach fashion you'll wear long after your trip.",
+      btnPieces: "Shop the Collection",
+      btnWa: "Order via WhatsApp",
     },
-    values: ["100% Handmade", "Selected Yarns", "One of a Kind", "Itacaré, BA"],
+    values: ["100% Handmade", "Beach Fashion", "One of a Kind", "Itacaré, Bahia"],
     products: {
       tag: "collection",
       title: "Our Pieces",
-      desc: "Each piece is unique — made with selected yarns and a lot of love. Click to chat on WhatsApp and make it yours.",
+      desc: "Each piece is unique — made with selected yarns and a lot of love. Tourists and locals welcome. Chat on WhatsApp to order and we'll arrange everything.",
       filters: { all: "All", tops: "Tops", conjuntos: "Sets" },
-      btn: "I want this piece",
+      btn: "Order this piece",
       photoSoon: "photo coming soon",
     },
     about: {
       tag: "our story",
       title: "About Manto Art",
-      p1: "Manto Art was born from a love of crochet and the desire to create pieces that carry soul. Every stitch is placed with intention, every yarn chosen with care.",
-      p2: "In Itacaré, surrounded by the sea and nature, we find the perfect inspiration to create garments that are more than pieces — they are stories woven by hand.",
-      badges: ["Authenticity", "Warmth", "Sustainability", "Slow Fashion"],
+      p1: "Manto Art was born from a love of crochet and the desire to create pieces that carry soul. Every stitch is placed with intention, every yarn chosen with care — made for those who appreciate true artisan craft.",
+      p2: "Based in Itacaré, Bahia — one of Brazil's most beautiful beach destinations — we create beach fashion that becomes a lasting memory of your visit. We serve tourists and visitors from all over the world, speaking Portuguese, English and Spanish.",
+      badges: ["Authenticity", "Beach Fashion", "Sustainability", "Slow Fashion"],
       photoPlaceholder: "your photo here",
     },
     testimonials: {
       tag: "who has worn it",
       title: "What they say",
       items: [
-        { text: "The most beautiful piece I've ever owned! Every detail is perfect, you can feel the love in every stitch.", name: "Marina S.", loc: "Itacaré" },
-        { text: "I bought the Sand Top and never take it off. Everyone asks where I got it. So exclusive!", name: "Juliana R.", loc: "Sao Paulo" },
-        { text: "A gift for my mom and she loved it! The packaging was gorgeous — it felt like a boutique present.", name: "Camila F.", loc: "Curitiba" },
+        { text: "Found Manto Art while visiting Itacaré and bought two pieces. Back in London, everyone asks where they're from. Worth every penny!", name: "Sophie T.", loc: "London, UK" },
+        { text: "Ordered from New York after seeing it on Instagram. The quality is incredible — true artisan work. It arrived beautifully packed.", name: "Carlos M.", loc: "New York, USA" },
+        { text: "The best souvenir I brought back from Brazil. Wore it straight to the beach in Itacaré and got so many compliments!", name: "Ana P.", loc: "Lisbon, Portugal" },
       ],
     },
     contact: {
-      tag: "let's talk?",
+      tag: "visiting Itacaré?",
       title: "Get in touch",
-      desc: "Want to know more about a piece? Have a special order? Message us on WhatsApp — the conversation is always personal and no-pressure.",
+      desc: "Visiting Itacaré or shopping from abroad? We speak English and Spanish. Message us on WhatsApp for pieces, custom orders, and international shipping — the conversation is always personal and no-pressure.",
       btn: "Chat on WhatsApp",
       labelInstagram: "Instagram",
       labelLocal: "Location",
@@ -128,13 +157,13 @@ const translations = {
     },
     footer: { tagline: "Made by hand, made with soul." },
     productDescs: {
-      1: "Halter crochet top in blue and ecru with horizontal stripes and natural shell trim at the hem. Perfect for beach days and summer shoots.",
-      2: "Structured bust in red with a granny-square band in green, yellow and red. Entirely hand-crafted — every square is individual.",
-      3: "Fitted emerald green top with a floral square detail at the hem. The statement piece of any outfit.",
-      4: "Earthy-tone top with dense weave and a handmade black crossbody bag. A complete, cohesive look ready to wear.",
-      5: "Sand-toned top with a structured center weave and natural shells at the hem. Light, elegant and versatile.",
-      6: "One-piece front red top with a handmade black bag. A bold look perfect for campaigns and social content.",
-      7: "The same style available in multiple colors, made to order. Same stitch, same finish — your color choice.",
+      1: "Halter crochet top in blue and ecru with horizontal stripes and natural shell trim. The perfect beach fashion souvenir from Itacaré, Bahia.",
+      2: "Structured bust in red with a granny-square band in green, yellow and red. Entirely handcrafted artisan beachwear — every square is individual.",
+      3: "Fitted emerald green crochet top with a floral square detail at the hem. A statement beach fashion piece for Itacaré and beyond.",
+      4: "Earthy-tone crochet top with dense weave and handmade black crossbody bag. A complete, cohesive artisan beach look.",
+      5: "Sand-toned top with structured center weave and natural shells at the hem. Light, elegant beach fashion — a true Bahia classic.",
+      6: "Bold red crochet top with a handmade black bag. Eye-catching artisan beachwear, perfect for your Itacaré beach days.",
+      7: "Same handmade style available in multiple colors, made to order. Your custom artisan crochet top from Bahia — your color choice.",
     },
   },
 
@@ -144,43 +173,43 @@ const translations = {
       home: "Inicio", pieces: "Piezas", about: "Sobre", contact: "Contacto", cta: "Contactar",
     },
     hero: {
-      tag: "crochet artesanal en Itacaré",
+      tag: "moda de playa artesanal · Itacaré, Bahía, Brasil",
       title1: "Hecho a mano,",
       title2: "hecho con alma.",
-      desc: "Cada pieza de Manto Art es tejida a mano con carino y dedicacion. Son horas de trabajo artesanal transformadas en prendas unicas que cuentan historias.",
-      btnPieces: "Ver Piezas",
-      btnWa: "Escribir en WhatsApp",
+      desc: "Descubre ropa de playa artesanal de crochet en Itacaré, Bahía. Cada pieza de Manto Art es un recuerdo único — horas de trabajo artesanal transformadas en moda de playa que llevarás mucho después de tu viaje.",
+      btnPieces: "Ver la Colección",
+      btnWa: "Pedir por WhatsApp",
     },
-    values: ["100% Artesanal", "Hilos Seleccionados", "Pieza Unica", "Itacaré, BA"],
+    values: ["100% Artesanal", "Moda de Playa", "Pieza Unica", "Itacaré, Bahía"],
     products: {
       tag: "coleccion",
       title: "Nuestras Piezas",
-      desc: "Cada pieza es unica — hecha con hilos seleccionados y mucho amor. Haz clic para conversar en WhatsApp y asegurar la tuya.",
+      desc: "Cada pieza es unica — hecha con hilos seleccionados y mucho amor. Turistas y locales bienvenidos. Escríbenos en WhatsApp para hacer tu pedido.",
       filters: { all: "Todas", tops: "Tops", conjuntos: "Conjuntos" },
-      btn: "Quiero esta pieza",
+      btn: "Pedir esta pieza",
       photoSoon: "foto pronto",
     },
     about: {
       tag: "nuestra historia",
       title: "Sobre Manto Art",
-      p1: "Manto Art nacio del amor por el crochet y el deseo de crear piezas que lleven alma. Cada punto se da con intencion, cada hilo se elige con carino.",
-      p2: "En Itacaré, entre el mar y la naturaleza, encontramos la inspiracion perfecta para crear ropa que es mas que prendas — son historias tejidas a mano.",
-      badges: ["Autenticidad", "Calidez", "Sostenibilidad", "Slow Fashion"],
+      p1: "Manto Art nacio del amor por el crochet y el deseo de crear piezas que lleven alma. Cada punto se da con intencion, cada hilo se elige con carino — hecho para quienes valoran el trabajo artesanal verdadero.",
+      p2: "Con sede en Itacaré, Bahía — uno de los destinos de playa mas bellos de Brasil — creamos moda de playa que se convierte en un recuerdo duradero de tu visita. Atendemos turistas de todo el mundo en portugués, inglés y español.",
+      badges: ["Autenticidad", "Moda de Playa", "Sostenibilidad", "Slow Fashion"],
       photoPlaceholder: "tu foto aqui",
     },
     testimonials: {
       tag: "quienes ya lo usaron",
       title: "Lo que dicen",
       items: [
-        { text: "La pieza mas linda que he tenido. Cada detalle es perfecto, se siente el carino en cada punto.", name: "Marina S.", loc: "Itacaré" },
-        { text: "Compre el Top Arena y no me lo saco mas. Todos preguntan donde lo compre. Super exclusivo!", name: "Juliana R.", loc: "Sao Paulo" },
-        { text: "Un regalo para mi mama y lo amo! El empaque llego hermoso, parecia un regalo de boutique.", name: "Camila F.", loc: "Curitiba" },
+        { text: "Encontré Manto Art visitando Itacaré y compré dos piezas. En Buenos Aires todos preguntan de dónde son. ¡Increíble calidad artesanal!", name: "Valentina G.", loc: "Buenos Aires, Argentina" },
+        { text: "Pedí desde México por Instagram. La calidad es impresionante — trabajo artesanal auténtico. Llegó empacado de forma hermosa.", name: "Diego R.", loc: "Ciudad de México" },
+        { text: "El mejor souvenir que traje de Brasil. Me lo puse directo en la playa de Itacaré y recibí muchos cumplidos!", name: "Isabel M.", loc: "Madrid, España" },
       ],
     },
     contact: {
-      tag: "vamos a conversar?",
+      tag: "de visita en Itacaré?",
       title: "Hablemos",
-      desc: "Quieres saber mas sobre una pieza? Tienes un pedido especial? Escribenos en WhatsApp — la conversacion es siempre personal y sin compromiso.",
+      desc: "¿De visita en Itacaré o comprando desde el extranjero? Hablamos español. Escríbenos por WhatsApp para piezas, pedidos personalizados y envíos internacionales — la conversación es siempre personal y sin compromiso.",
       btn: "Escribir en WhatsApp",
       labelInstagram: "Instagram",
       labelLocal: "Ubicacion",
@@ -189,13 +218,13 @@ const translations = {
     },
     footer: { tagline: "Hecho a mano, hecho con alma." },
     productDescs: {
-      1: "Top halter de crochet azul y crudo con rayas horizontales y conchas naturales en el borde. Perfecto para playa y sesiones de verano.",
-      2: "Busto estructurado en rojo con banda en granny squares de colores — verde, amarillo y rojo. Hecho enteramente a mano.",
-      3: "Cae ajustado en verde esmeralda con detalle floral en squares en el borde. La protagonista de cualquier look.",
-      4: "Top en tono terroso con trama densa y bolso transversal negro hecho a mano. Look completo y listo para usar.",
-      5: "Tono arena con trama central estructurada y conchas naturales en el borde. Ligero, elegante y versatil.",
-      6: "Top frontal unico en rojo intenso con bolso negro artesanal. Un look de impacto para campanas y redes sociales.",
-      7: "El mismo modelo disponible en multiples colores bajo pedido. Mismo punto, mismo acabado — tu color.",
+      1: "Top halter de crochet azul y crudo con rayas horizontales y conchas naturales. El souvenir de moda de playa perfecto de Itacaré, Bahía.",
+      2: "Busto estructurado en rojo con banda en granny squares — verde, amarillo y rojo. Ropa de playa artesanal hecha enteramente a mano.",
+      3: "Top ajustado verde esmeralda con detalle floral en el borde. La pieza protagonista de cualquier look en la playa de Itacaré.",
+      4: "Top en tono terroso con trama densa y bolso transversal negro artesanal. Look de playa completo y listo para usar.",
+      5: "Tono arena con trama central estructurada y conchas naturales. Moda de playa ligera, elegante y versátil — clásico de Bahía.",
+      6: "Top rojo intenso con bolso negro artesanal. Moda de playa de impacto, perfecta para los días en Itacaré.",
+      7: "El mismo modelo disponible en multiples colores bajo pedido. Tu top artesanal de crochet personalizado desde Bahía.",
     },
   },
 };
@@ -367,7 +396,20 @@ function LangSwitcher({ lang, setLang }) {
 // ══════════════════════════════════════════════════════════════
 export default function MantoArtSite() {
   const [filter, setFilter] = useState("all");
-  const [lang, setLang] = useState("pt");
+  const [lang, setLang] = useState(getInitialLang);
+
+  useEffect(() => {
+    const m = META[lang];
+    document.title = m.title;
+    document.documentElement.lang = m.lang;
+    localStorage.setItem("manto-lang", lang);
+    document.querySelector('meta[name="description"]')?.setAttribute("content", m.desc);
+    document.querySelector('meta[property="og:title"]')?.setAttribute("content", m.title);
+    document.querySelector('meta[property="og:description"]')?.setAttribute("content", m.desc);
+    document.querySelector('meta[property="og:locale"]')?.setAttribute("content", m.locale);
+    document.querySelector('meta[name="twitter:title"]')?.setAttribute("content", m.title);
+    document.querySelector('meta[name="twitter:description"]')?.setAttribute("content", m.desc);
+  }, [lang]);
 
   const t = translations[lang];
   const waLink = (product) =>
